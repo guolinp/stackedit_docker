@@ -4,7 +4,7 @@
 
 ## Run
 ```
-$ docker run -d -p 8000:3000 panguolin/stackedit
+$ docker run -d -p 8000:8000 panguolin/stackedit
 ```
 
 ## Access
