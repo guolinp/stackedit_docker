@@ -87,12 +87,6 @@ func main() {
 	if healthcheckMode() {
 		healthcheck(listeningPort)
 	}
-	fmt.Println("#####################################")
-	fmt.Println("########## StackEdit Server #########")
-	fmt.Println("########## by Quentin McGaw #########")
-	fmt.Println("########## Give some " + emoji.Sprint(":heart:") + "at ##########")
-	fmt.Println("# github.com/qdm12/stackedit-docker #")
-	fmt.Print("#####################################\n\n")
 	http.HandleFunc("/healthcheck", func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 	})
