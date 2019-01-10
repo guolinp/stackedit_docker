@@ -1,10 +1,10 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
-MAINTAINER "Pan Guolin"
+MAINTAINER Guolin.Pan
 
 RUN apt-get update \
     && apt-get install -y curl git \
-    && curl -sL https://deb.nodesource.com/setup_0.12 | bash - \
+    && curl -sL https://deb.nodesource.com/setup_11.x | bash - \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/* \
     && git clone https://github.com/benweet/stackedit.git
