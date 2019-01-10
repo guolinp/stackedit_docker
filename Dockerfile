@@ -12,6 +12,7 @@ RUN apt-get update \
 WORKDIR /stackedit
 
 RUN npm install \
+    && npm install -g node-pre-gyp \
     && npm install bower \
     && node_modules/bower/bin/bower install --production --config.interactive=false --allow-root
 
