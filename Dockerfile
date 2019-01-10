@@ -10,7 +10,7 @@ WORKDIR /tmp/gobuild
 FROM scratch AS final
 ARG STACKEDIT_VERSION
 
-EXPOSE 3000
+EXPOSE 8000
 HEALTHCHECK --start-period=1s --interval=100s --timeout=2s --retries=1 CMD ["/server","healthcheck"]
 USER 1000
 ENTRYPOINT ["/server"]
