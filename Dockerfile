@@ -7,12 +7,12 @@ RUN apt-get upgrade -y
 RUN apt-get install -y wget
 
 WORKDIR /
-RUN mkdir -p /stackedit
-RUN wget https://github.com/benweet/stackedit/archive/v5.13.0.tar.gz
-RUN tar -xzf v5.13.0.tar.gz
+RUN git clone https://github.com/benweet/stackedit.git
 
-WORKDIR /stackedit-5.13.0
-RUN npm install
+WORKDIR /stackedit
+RUN npm install \
+    && npm install bower \
+    && node_modules/bower/bin/bower install --production --config.interactive=false --allow-root
 
 EXPOSE 3000
 
